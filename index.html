@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Raghav Store - modern e-commerce demo website">
+  <title>Raghav Store | Shop Smart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="nav-wrap">
+      <a class="brand" href="#home"><span class="brand-icon">R</span><span>Raghav<span class="brand-accent">Store</span></span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a class="active" href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+      </nav>
+      <div class="nav-actions">
+        <label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Search products..." aria-label="Search products"></label>
+        <button class="icon-btn" id="wishlist-btn" title="Wishlist">♡<span class="badge" id="wishlist-count">0</span></button>
+        <button class="cart-btn" id="cart-btn">🛒 Cart <span id="count">0</span></button>
+      </div>
+      <button class="menu-btn" id="menu-btn" aria-label="Open menu">☰</button>
+    </div>
+    <div class="mobile-search"><label class="search-box"><span>⌕</span><input id="mobile-search" type="search" placeholder="Search products..." aria-label="Search products"></label></div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">NEW SEASON • SMART SHOPPING</span>
+        <h1>Everything you need.<br><span>One smart store.</span></h1>
+        <p>Discover trending electronics and everyday essentials at prices you'll love.</p>
+        <div class="hero-actions"><a class="primary-btn" href="#products">Shop Now <span>→</span></a><a class="secondary-btn" href="#categories">Explore Categories</a></div>
+        <div class="trust-row"><span>✓ Secure checkout</span><span>✓ Fast delivery</span><span>✓ Easy returns</span></div>
+      </div>
+      <div class="hero-visual"><div class="hero-glow"></div><img src="https://images.unsplash.com/photo-1607082348824-0a96f2a5f0a9?auto=format&fit=crop&w=1000&q=85" alt="Shopping bags and packages"></div>
+    </section>
+
+    <section class="stats"><div><strong>10K+</strong><span>Happy shoppers</span></div><div><strong>500+</strong><span>Products</span></div><div><strong>4.8/5</strong><span>Customer rating</span></div><div><strong>24/7</strong><span>Support</span></div></section>
+
+    <section class="section" id="categories">
+      <div class="section-head"><div><span class="eyebrow dark">SHOP BY CATEGORY</span><h2>Find what you need</h2></div></div>
+      <div class="categories">
+        <button class="category-card" data-category="Electronics"><span>🎧</span><div><b>Electronics</b><small>Smart tech & gadgets</small></div><i>→</i></button>
+        <button class="category-card" data-category="Fashion"><span>👕</span><div><b>Fashion</b><small>Trending essentials</small></div><i>→</i></button>
+        <button class="category-card" data-category="Accessories"><span>⌚</span><div><b>Accessories</b><small>Style meets utility</small></div><i>→</i></button>
+        <button class="category-card" data-category="Gaming"><span>🎮</span><div><b>Gaming</b><small>Level up your setup</small></div><i>→</i></button>
+      </div>
+    </section>
+
+    <section class="section products-section" id="products">
+      <div class="section-head product-head"><div><span class="eyebrow dark">OUR COLLECTION</span><h2>Popular products</h2></div><div class="controls"><select id="category-filter"><option value="All">All Categories</option><option>Electronics</option><option>Fashion</option><option>Accessories</option><option>Gaming</option></select><select id="sort"><option value="featured">Sort: Featured</option><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option><option value="rating">Top Rated</option></select></div></div>
+      <div class="product-grid" id="product-grid"></div>
+      <div class="empty-state" id="empty-state" hidden><div>🔎</div><h3>No products found</h3><p>Try another search or category.</p><button class="secondary-btn" id="clear-filters">Clear filters</button></div>
+    </section>
+
+    <section class="promo"><div><span class="eyebrow">LIMITED TIME OFFER</span><h2>Get 15% off your first order</h2><p>Use code <strong>RAGHAV15</strong> at checkout.</p></div><button class="primary-btn" id="copy-code">Copy Code</button></section>
+
+    <section class="section about" id="about"><div class="about-card"><div><span class="eyebrow dark">WHY RAGHAV STORE?</span><h2>Simple shopping, better experience.</h2><p>This demo e-commerce project combines a clean responsive interface with practical shopping features: search, category filtering, sorting, wishlist, product details, cart management and a demo checkout flow.</p></div><div class="feature-list"><div>⚡ <b>Fast & responsive</b><span>Works across desktop and mobile.</span></div><div>🛒 <b>Smart cart</b><span>Quantity, subtotal and total updates.</span></div><div>🔒 <b>Demo checkout</b><span>Safe front-end-only checkout flow.</span></div></div></div></section>
+  </main>
+
+  <footer><div class="footer-main"><a class="brand" href="#home"><span class="brand-icon">R</span><span>Raghav<span class="brand-accent">Store</span></span></a><p>A modern e-commerce demo project built with HTML, CSS & JavaScript.</p><div class="footer-links"><a href="#home">Home</a><a href="#products">Products</a><a href="#about">About</a></div></div><div class="footer-bottom">© 2026 Raghav Store • Designed & developed by Raghav Vyas</div></footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart"><div class="drawer-head"><h3>Your Cart</h3><button class="close-btn" id="close-cart">×</button></div><div class="cart-items" id="cart-items"></div><div class="cart-footer"><div class="coupon-row"><input id="coupon" placeholder="Coupon code"><button id="apply-coupon">Apply</button></div><div class="summary"><span>Subtotal</span><strong id="subtotal">₹0</strong></div><div class="summary"><span>Discount</span><strong id="discount">₹0</strong></div><div class="summary total"><span>Total</span><strong id="total">₹0</strong></div><button class="checkout-btn" id="checkout">Proceed to Checkout →</button></div></aside>
+
+  <div class="modal" id="product-modal"><div class="modal-card"><button class="close-btn" id="close-modal">×</button><img id="modal-img" src="" alt=""><div class="modal-info"><span class="pill" id="modal-category"></span><h2 id="modal-title"></h2><div class="rating" id="modal-rating"></div><p id="modal-desc"></p><div class="modal-price" id="modal-price"></div><button class="primary-btn" id="modal-add">Add to Cart</button></div></div></div>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
